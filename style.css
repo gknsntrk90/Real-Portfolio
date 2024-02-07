@@ -1,0 +1,261 @@
+/* google font import link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&family=Roboto:ital,wght@1,300&display=swap');
+
+
+/** sıfırlama **/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+.about{
+    min-height: 100vh;
+    width: 100%;
+}
+
+/**navbar**/
+.top-container{
+    min-height: 30vh;
+    width: 100%;
+    background-color: rgb(5, 41, 74);
+    display: flex;
+    /**navbarda ki yazıyı boydan ortalap yazıyı sola alıyoruz **/
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 35%;
+    color: #fff;
+    font-family: 'karma';
+    /**navbar ile header arasında ki çizgiye renk veriyoruz **/
+    border-bottom: 0.5px solid rgb(12, 107, 196);
+}
+
+/**navbarda ki h1 **/
+.top-container h1{
+    margin-bottom: 6px;
+    letter-spacing: 1px; /**harfler arası boşluk**/
+    font-size: 40px;
+}
+/** navbarda ki paragraf **/
+.top-container p{
+    width: 60%;
+}
+
+.bottom-container{
+    /**input ve message bölümlerimizi ortalıyoruz **/
+    display: flex;
+    justify-content: space-between;
+    padding: 4% 8%;
+    min-height: 70vh;
+    width: 100%;
+    background-color: rgb(4, 51, 92);
+    /* background: radial-gradient(circle,rgba(35,63,90,1)33% ,rgba(10,67,121,1)100%); */
+    background: linear-gradient(160deg,rgba(4,51,92,1)0%,rgba(3,36,67,1)100%);
+}
+
+.bottom-container .contact{
+    /**iletişim bilgilerimizi ortalıyoruz**/
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 30%;
+    height: 100%;
+}
+
+.bottom-container .image{
+    height: 350px;
+    width: 350px;
+    margin-top: -180px;
+}
+
+.bottom-container .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.bottom-container .contact h4{
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+
+.bottom-container .contact h3{
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 0.5px;
+}
+
+.bottom-container .contact .social{
+    /**iconlarımızın yerini düzeltiyoruz bu şekilde yanyana geliyorlar**/
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.bottom-container .contact .social .icons{
+    /**iconlarımızın boyutunu ayarlıyoruz background olarak**/
+    height: 40px;
+    width: 40px;
+    background-color: rgba(3, 36, 67, 1);
+    border-radius: 50%;
+    position: relative;
+    /**iconlarımızın etrafına mavi circle ile kaplıyoruz**/
+    border: 1px solid rgb(12,107,196);
+    /**icon etrafında ki circlelara yanım sönme veriyoruz**/
+    transition: .6s;
+}
+
+.bottom-container .contact .social .icons i{
+    /**iconlarımızın kendi boyutunu ayarlıyoruz ve tam ortalıyoruz yuvarlak içine**/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 19px;
+}
+
+.bottom-container .contact .social .icon:hover{
+    transform: translateY(-8px);
+    background-color: rgb(12, 107, 196);
+
+}
+
+.bottom-container .form{
+     height: 100%;
+     width: 70%;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 12px; /**gap ile inputların arasını açıyoruz burada birazcık aşağı ve yukarı olarak**/
+     padding: 0 2%;
+}
+
+.box-wrapper{
+    display: flex;
+    width: 100%;
+    gap: 12px;
+}
+
+.box{
+    /**inputlarımızı yatay olarak uzatıyoruz ve düzeltiyoruz**/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    
+}
+label{
+    /** input üzerindeki isimlerin rengini beyaz yapıyoruz email yourmessage name gibi**/
+    color: #fff;
+}
+
+input,textarea{
+    /**inputlarımızı genişletiyoruz ve büyütüyoruz ve köşelerini oval yapıyoruz,rengini ayarlıyoruz input içinin**/
+    height: 42%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding-left: 12px !important;
+    outline: none;
+    color: #fff;
+}
+
+
+
+
+input:focus,textarea:focus{
+    border-color: rgb(12, 107, 196);
+}
+
+
+
+
+textarea{
+    height: 200px;
+    padding-top: 5px;
+}
+
+button{
+    width: 100%;
+    height: 48px;
+    border-radius: 30px;
+    background-color: rgb(12, 107, 196);
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;transition: .6s;
+    /**button etrafına border rengi veriyoruz**/
+    border: 1px solid rgb(12, 197, 196);
+}
+
+button:hover{
+    /**hover ile buttonda yanıp sönme yapıyoruz mouse üzerine geldikçe**/
+    background-color: rgba(3, 36, 67, 1);
+}
+
+
+.wrapper{
+    /**foto altındaki iletişim yazılarını düzeltiyoru**/
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@media screen and (max-width:1100px) {
+    .bottom-container .image{
+        height: 260px;
+        width: 255px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .bottom-container{
+        flex-direction: column;
+    }
+    .top-container{
+        padding-left: 8%;
+    }
+    .bottom-container{
+        margin: 0;
+        height: 300px;
+        width: 285;
+        margin-bottom: 20px;
+    }
+    .bottom-container .contact{
+        width: 100%;
+        flex-direction: row;
+        margin-bottom: 50px;
+    }
+    .wrapper{
+        padding: 0 20px;
+    }
+    .bottom-container .form{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .bottom-container .contact{
+        flex-direction: column;
+    }
+    .bottom-container .image{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .top-container h1{
+        font-size: 30px;
+    }
+    .top-container p{
+        width: 80%;
+    }
+}
